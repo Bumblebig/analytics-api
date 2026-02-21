@@ -40,7 +40,6 @@ public class MerchantEvent {
     private String merchantTier;
 
     protected MerchantEvent() {
-        // TODO: for JPA
     }
 
     public MerchantEvent(String eventId, String merchantId, LocalDateTime eventTimestamp, String product,
