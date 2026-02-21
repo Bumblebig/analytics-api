@@ -19,9 +19,10 @@ public interface MerchantEventRepository extends JpaRepository<MerchantEvent, St
 
     @Query(value = """
             SELECT to_char(event_timestamp, 'YYYY-MM') AS month,
-               COUNT(DISTINCT merchant_id)       AS cnt
+                   COUNT(DISTINCT merchant_id)       AS cnt
             FROM merchant_events
             WHERE status = 'SUCCESS'
+              AND event_timestamp IS NOT NULL
             GROUP BY month
             ORDER BY month
             """, nativeQuery = true)

@@ -13,7 +13,6 @@ public class CsvController {
 
     private final CsvService csvService;
 
-    @Autowired
     public CsvController(CsvService csvService) {
         this.csvService = csvService;
     }
