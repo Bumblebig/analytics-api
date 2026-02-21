@@ -21,7 +21,7 @@ public class DataLoader implements CommandLineRunner {
         if (repository.count() == 0) {
             csvService.importAllCsvsToDb();
         } else {
-            System.out.println("DB already has data, skipping CSV import.");
+            System.out.println("DB already has data");
         }
     }
 }
