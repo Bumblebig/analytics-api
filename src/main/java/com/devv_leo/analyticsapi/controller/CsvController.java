@@ -22,4 +22,9 @@ public class CsvController {
     public List<MerchantEvent> getAllEvents() {
         return csvService.readAllCsvs();
     }
+
+    @GetMapping("/events/count")
+    public long getEventCount() {
+        return csvService.readAllCsvs().size();
+    }
 }
